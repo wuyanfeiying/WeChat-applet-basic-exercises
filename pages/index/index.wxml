@@ -1,0 +1,49 @@
+<!--index.wxml-->
+<view class="container">
+  <!-- 轮播图 -->
+  <view class='selection'>
+    <swiper indicator-dots="true" autoplay="true" interval="3000" duration="1000">
+      <block wx:for="{{imgUrls}}">
+        <swiper-item>
+          <image src="{{item}}" class="slide-image" width="355" height="150" />
+        </swiper-item>
+      </block>
+    </swiper>
+  </view>
+  <!-- 精品推荐 -->
+  <view class='selection'>
+    <view class='header'>
+      <text>精品推荐</text>
+      <text class='text-all'>全部精品</text>
+    </view>
+    <view class='content'>
+      <view class='content-item' wx:for="{{contentItems}}">
+        <image src='../../images/1.jpg'></image>
+        <view class='content-item-text'>
+          <text>这里是文字标题</text>
+        </view>
+      </view>
+    </view>
+  </view>
+  <!-- 测评区域 -->
+  <view class='selection'>
+    <view class='header'>
+      <text>热门评测</text>
+      <text class='text-all'>全部评测</text>
+    </view>
+    <view class='list-item' wx:for="{{listItems}}">
+      <view class='list-item-imges'>
+        <image src='../../images/2.jpg' class='banner'></image>
+        <image src='../../images/3.jpg' class='avatar'></image>
+      </view>
+      <view class='list-item-text'>
+      <view class='list-item-text-title'>
+      <text>标题</text>
+      </view>
+      <view class='list-item-text-content'>
+      <text>内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容</text>
+      </view>
+      </view>
+    </view>
+  </view>
+</view>
